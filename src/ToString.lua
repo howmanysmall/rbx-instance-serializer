@@ -171,7 +171,7 @@ local function toStringVerbose(...)
             if #keypoints == 2 and keypoints[1].Value == keypoints[2].Value then
                 results[i] = string.format("NumberSequence.new(%s)", toString(keypoints[1].Value))
             elseif #keypoints == 2 then
-                results[i] = string.format("NumberSequence.new(%s, %s)", toString(keypoints[1].Value, keypoints[2].Value))
+                results[i] = string.format("NumberSequence.new(%s, %s)", toString(keypoints[1].Value), toString(keypoints[2].Value))
             else
                 results[i] = string.format("NumberSequence.new({%s})", toString(unpack(keypoints)))
             end
